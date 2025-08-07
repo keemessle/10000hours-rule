@@ -9,8 +9,8 @@
   </head>
   <body>
     <header>
-      <h1 class="header-title">
-        타이틀 올 자리
+      <h1>
+        <img src="./src/images/title.svg" alt="웹 사이트 타이틀" />
         <!-- <img
           src="./src/images/title.png"
           alt="홈페이지 타이틀"
@@ -19,36 +19,72 @@
       </h1>
     </header>
     <main>
-      <section class="text1">
-        <p>“연습은 어제의 당신보다 당신을 더 낫게 만든다.”</p>
+      <section class="text-cont">
+        <h2 class="sr-only">응원 텍스트</h2>
+        <p class="text1">“연습은 어제의 당신보다 당신을 더 낫게 만든다.”</p>
       </section>
-      <section class="text2">
-        <p>
-          1만 시간의 법칙은 <br />
+
+      <section class="quotes-cont">
+        <h2 class="sr-only">인용 텍스트</h2>
+        <p class="text2">
+          <span class="strong">1만 시간의 법칙</span>은 <br />
           어떤 분야의 전문가가 되기 위해서는 <br />
           최소한 1만 시간의 훈련이 필요하다는 법칙이다.
         </p>
       </section>
-      <section class="input-text">
-        <p>나는 <input type="text" /> 전문가가 될 것이다.</p>
+
+      <section class="input-cont">
+        <h2 class="sr-only">입력 텍스트</h2>
         <p>
-          그래서 앞으로 매일 하루에 <input type="text" /> 시간씩 훈련할 것이다.
+          나는 <input type="text" value="예)프로그래밍" /> 전문가가 될 것이다.
+        </p>
+        <p>
+          그래서 앞으로 매일 하루에
+          <input type="text" value="예)5시간" /> 시간씩 훈련할 것이다.
         </p>
       </section>
+
       <section class="btn-click">
-        <button><img src="" alt="" />버튼과 손가락 이미지</button>
+        <h2 class="sr-only">계산 버튼</h2>
+        <button>나는 며칠 동안 훈련을 해야 1만 시간이 될까?</button>
+        <img
+          src="./src/images/click.png"
+          alt="클릭하는 손모양"
+          class="click-img"
+        />
       </section>
-      <section class="print-text">
-        <p>당신은 <span>input 출력</span>전문가가 되기 위해서</p>
-        <p>대략 <span>input 출력</span>일 이상 훈련하셔야 합니다! :)</p>
+
+      <section class="print-cont">
+        <h2 class="sr-only">출력 텍스트</h2>
+        <p>
+          당신은 <span class="print-text">프로그래밍</span>전문가가 되기 위해서
+        </p>
+        <p>
+          대략 <span class="print-text">5110</span>일 이상 훈련하셔야 합니다! :)
+        </p>
       </section>
-      <section class="btn-modal">
-        <button>버튼1</button>
-        <button>버튼2</button>
+
+      <section class="btn-cont">
+        <h2 class="sr-only">훈련, 공유 버튼</h2>
+        <button class="modal-btn" id="open-btn">훈련하러 가기 GO! GO!</button>
+        <button class="share-btn">공유하기</button>
       </section>
+
+      <dialog id="dialog">
+        <div class="dialog-cont">
+          <div class="content-cont">
+            <p class="big-text">화이팅!!♥♥♥</p>
+            <p class="small-text">당신의 꿈을 응원합니다!</p>
+          </div>
+          <div class="img-btn-cont">
+            <img src="./src/images/licat.png" alt="응원하는 표정" />
+            <button id="close-btn">종료하고 진짜 훈련하러 가기 GO!GO!</button>
+          </div>
+        </div>
+      </dialog>
     </main>
     <footer>
-      <img src="./src/images/logo.png" alt="위니브 회사 로고" />
+      <img src="./src/images/logo-m.png" alt="위니브 회사 로고" />
       <p class="warning-text">
         본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 위니브에 있습니다.
         <br />
@@ -56,4 +92,19 @@
       </p>
     </footer>
   </body>
+
+  <script>
+    const dialog = document.getElementById("dialog");
+    const showDialogBtn = document.getElementById("open-btn");
+    const closeBtn = document.getElementById("close-btn");
+
+    showDialogBtn.addEventListener("click", () => {
+      dialog.showModal();
+      console.log("FE 짱짱");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      dialog.close();
+    });
+  </script>
 </html>
