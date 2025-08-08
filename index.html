@@ -10,58 +10,70 @@
   <body>
     <header>
       <h1>
-        <img src="./src/images/title.svg" alt="웹 사이트 타이틀" />
-        <!-- <img
-          src="./src/images/title.png"
-          alt="홈페이지 타이틀"
+        <img
+          src="./src/images/title.svg"
+          alt="1만 시간의 법칙"
           class="web-title"
-        /> -->
+        />
       </h1>
     </header>
+
     <main>
-      <section class="text-cont">
-        <h2 class="sr-only">응원 텍스트</h2>
-        <p class="text1">“연습은 어제의 당신보다 당신을 더 낫게 만든다.”</p>
+      <section class="quote-main">
+        <h2 class="sr-only">주요 인용문</h2>
+        <p class="quote">“연습은 어제의 당신보다 당신을 더 낫게 만든다.”</p>
       </section>
 
-      <section class="quotes-cont">
-        <h2 class="sr-only">인용 텍스트</h2>
-        <p class="text2">
+      <section class="quote-sub">
+        <h2 class="sr-only">1만 시간 법칙 설명</h2>
+        <p class="desc">
           <span class="strong">1만 시간의 법칙</span>은 <br />
           어떤 분야의 전문가가 되기 위해서는 <br />
           최소한 1만 시간의 훈련이 필요하다는 법칙이다.
         </p>
       </section>
 
-      <section class="input-cont">
-        <h2 class="sr-only">입력 텍스트</h2>
-        <p>
-          나는 <input type="text" value="예)프로그래밍" /> 전문가가 될 것이다.
-        </p>
-        <p>
-          그래서 앞으로 매일 하루에
-          <input type="text" value="예)5시간" /> 시간씩 훈련할 것이다.
-        </p>
-      </section>
+      <section class="training-calculator">
+        <h2 class="sr-only">전문가가 되기까지 남은 시간은?</h2>
+        <div class="form-group">
+          <div class="input-cont">
+            <p>
+              나는
+              <input
+                type="text"
+                placeholder="예)프로그래밍"
+                class="input-box"
+              />
+              전문가가 될 것이다.
+            </p>
+            <p>
+              그래서 앞으로 매일 하루에
+              <input type="text" placeholder="예)5시간" class="input-box" />
+              시간씩 훈련할 것이다.
+            </p>
+          </div>
 
-      <section class="btn-click">
-        <h2 class="sr-only">계산 버튼</h2>
-        <button>나는 며칠 동안 훈련을 해야 1만 시간이 될까?</button>
-        <img
-          src="./src/images/click.png"
-          alt="클릭하는 손모양"
-          class="click-img"
-        />
-      </section>
+          <div class="btn-wrapper">
+            <button class="calculate-btn">
+              나는 며칠 동안 훈련을 해야 1만 시간이 될까?
+            </button>
+            <img
+              src="./src/images/click.png"
+              alt="클릭하는 손모양"
+              class="click-icon"
+            />
+          </div>
+        </div>
 
-      <section class="print-cont">
-        <h2 class="sr-only">출력 텍스트</h2>
-        <p>
-          당신은 <span class="print-text">프로그래밍</span>전문가가 되기 위해서
-        </p>
-        <p>
-          대략 <span class="print-text">5110</span>일 이상 훈련하셔야 합니다! :)
-        </p>
+        <div class="result-group">
+          <p>
+            당신은 <span class="user-goal">프로그래밍</span>전문가가 되기 위해서
+          </p>
+          <p>
+            대략 <span class="user-goal">5110</span>일 이상 훈련하셔야 합니다!
+            :)
+          </p>
+        </div>
       </section>
 
       <section class="btn-cont">
@@ -71,18 +83,24 @@
       </section>
 
       <dialog id="dialog">
-        <div class="dialog-cont">
-          <div class="content-cont">
-            <p class="big-text">화이팅!!♥♥♥</p>
-            <p class="small-text">당신의 꿈을 응원합니다!</p>
+        <div class="dialog-wrapper">
+          <div class="cheering-cont">
+            <p class="message-large">화이팅!!♥♥♥</p>
+            <p class="message-small">당신의 꿈을 응원합니다!</p>
           </div>
           <div class="img-btn-cont">
-            <img src="./src/images/licat.png" alt="응원하는 표정" />
-            <button id="close-btn">종료하고 진짜 훈련하러 가기 GO!GO!</button>
+            <img
+              src="./src/images/licat.png"
+              alt="응원하는 사자고양이 캐릭터"
+            />
+            <button id="close-btn" class="close-btn">
+              종료하고 진짜 훈련하러 가기 GO!GO!
+            </button>
           </div>
         </div>
       </dialog>
     </main>
+
     <footer>
       <img src="./src/images/logo-m.png" alt="위니브 회사 로고" />
       <p class="warning-text">
@@ -91,20 +109,20 @@
         수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수 있습니다.
       </p>
     </footer>
+
+    <script>
+      const dialog = document.getElementById("dialog");
+      const showDialogBtn = document.getElementById("open-btn");
+      const closeBtn = document.getElementById("close-btn");
+
+      showDialogBtn.addEventListener("click", () => {
+        dialog.showModal();
+        console.log("모달창 열림");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        dialog.close();
+      });
+    </script>
   </body>
-
-  <script>
-    const dialog = document.getElementById("dialog");
-    const showDialogBtn = document.getElementById("open-btn");
-    const closeBtn = document.getElementById("close-btn");
-
-    showDialogBtn.addEventListener("click", () => {
-      dialog.showModal();
-      console.log("FE 짱짱");
-    });
-
-    closeBtn.addEventListener("click", () => {
-      dialog.close();
-    });
-  </script>
 </html>
