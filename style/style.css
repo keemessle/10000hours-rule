@@ -146,14 +146,14 @@ main {
   content: "";
   width: 3.6rem;
   height: 3.2rem;
-  background: url("../images/left-quote.png") no-repeat center / contain;
+  background: url("./images/left-quote.png") no-repeat center / contain;
 }
 
 .rule-cont::after {
   content: "";
   width: 3.6rem;
   height: 3.2rem;
-  background: url("../images/right-quote.png") no-repeat center / contain;
+  background: url("./images/right-quote.png") no-repeat center / contain;
 }
 
 .training-calculator {
