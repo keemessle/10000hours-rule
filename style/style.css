@@ -76,7 +76,6 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  /* max-width: 192rem; */
 
   font-family: "GmarketSansMedium";
   font-size: 1.6rem;
@@ -92,9 +91,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 100%; */
   max-width: 56.4rem;
-  background: url("/src/images/clock.png") no-repeat center / contain;
+  background: url("../src/images/clock.png") no-repeat center / contain;
   aspect-ratio: 564 / 265;
 }
 
@@ -112,7 +110,6 @@ main {
 }
 
 .quote-cont {
-  /* width: 100%; */
   max-width: 48.6rem;
   margin-bottom: 10rem;
 }
@@ -120,13 +117,11 @@ main {
 .quote {
   font-family: "OTEnjoystoriesBA";
   font-size: 3.6rem;
-  font-weight: 700;
   color: var(--point-color2);
   margin-bottom: 8rem;
 }
 
 .rule-cont {
-  /* width: 100%; */
   max-width: 48.5rem;
   display: flex;
   justify-content: space-between;
@@ -134,12 +129,10 @@ main {
 }
 
 .rule-desc {
-  /* font-family: "GmarketSansLight"; */
   font-size: 1.8rem;
   font-weight: 400;
   color: var(--main-color);
   line-height: 1.6;
-  /* vertical-align: middle; */
 }
 
 .strong {
@@ -153,14 +146,14 @@ main {
   content: "";
   width: 3.6rem;
   height: 3.2rem;
-  background: url("/src/images/left-quote.png") no-repeat center / contain;
+  background: url("../src/images/left-quote.png") no-repeat center / contain;
 }
 
 .rule-cont::after {
   content: "";
   width: 3.6rem;
   height: 3.2rem;
-  background: url("/src/images/right-quote.png") no-repeat center / contain;
+  background: url("../src/images/right-quote.png") no-repeat center / contain;
 }
 
 .training-calculator {
@@ -327,7 +320,7 @@ dialog {
   padding: 2rem 5rem;
   border: none;
   border-radius: 1.2rem;
-  background-color: var(--potint-bg-color);
+  background-color: var(--point-bg-color);
   font-family: "GmarketSansBold";
   font-size: var(--main-font-size);
   color: var(--point-color);
