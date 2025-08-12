@@ -220,7 +220,7 @@ main {
   top: 2rem;
   right: 2.5rem;
   width: 6.4rem;
-  aspect-ratio: 64 / 72;
+  aspect-ratio: 64/72;
   object-fit: contain;
 }
 
@@ -348,6 +348,7 @@ footer {
 }
 
 /* ------ 미디어쿼리 ------ */
+
 /* 태블릿 가로 */
 @media screen and (max-width: 1024px) {
   .web-title {
@@ -364,7 +365,7 @@ footer {
   }
 
   dialog {
-    width: 65rem;
+    max-width: 65rem;
   }
 
   .modal-cont {
@@ -497,7 +498,7 @@ footer {
   }
 
   dialog {
-    width: 45rem;
+    max-width: 45rem;
   }
 
   .modal-cont {
@@ -581,7 +582,7 @@ footer {
   }
 
   dialog {
-    width: 33rem;
+    max-width: 33rem;
     height: 50rem;
   }
 
@@ -628,8 +629,6 @@ footer {
   }
 
   main {
-    /* 여백 없이 너비 채움 */
-    width: 100%;
     margin-bottom: 6rem;
   }
 
