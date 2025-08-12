@@ -170,7 +170,6 @@ main {
 }
 
 .input-cont {
-  /* width: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -202,7 +201,6 @@ main {
 }
 
 .calculate-btn {
-  /* width: 100%; */
   max-width: 56.7rem;
   padding: 2rem 5rem;
   border: none;

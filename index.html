@@ -11,11 +11,6 @@
   <body>
     <header>
       <h1 class="web-title">
-        <!-- <img
-          src="./src/images/title.svg"
-          alt="1만 시간의 법칙"
-          class="web-title"
-        /> -->
         <img src="./images/title.png" alt="1만 시간의 법칙" />
       </h1>
     </header>
@@ -40,8 +35,10 @@
           <div class="input-cont">
             <p>
               나는
+              <label for="goal" class="sr-only">목표</label>
               <input
                 type="text"
+                id="goal"
                 name="goal"
                 placeholder="예)프로그래밍"
                 class="input-box"
@@ -51,8 +48,10 @@
             <p>
               <span>그래서 앞으로 매일 하루에</span>
               <span>
+                <label for="goal-time" class="sr-only">목표 도달 시간</label>
                 <input
                   type="text"
+                  id="goal-time"
                   name="goal-time"
                   placeholder="예)5시간"
                   class="input-box"
