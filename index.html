@@ -18,7 +18,9 @@
     <main>
       <section class="quote-cont">
         <h2 class="sr-only">1만 시간 법칙 설명</h2>
-        <p class="quote">“연습은 어제의 당신보다 당신을 더 낫게 만든다.”</p>
+        <blockquote class="quote">
+          “연습은 어제의 당신보다 당신을 더 낫게 만든다.”
+        </blockquote>
 
         <div class="rule-cont">
           <p class="rule-desc">
@@ -31,7 +33,7 @@
 
       <section class="training-calculator">
         <h2 class="sr-only">전문가가 되기까지 남은 시간은?</h2>
-        <div class="input-group">
+        <form class="input-form">
           <div class="input-cont">
             <p>
               나는
@@ -42,6 +44,7 @@
                 name="goal"
                 placeholder="예)프로그래밍"
                 class="input-box"
+                required
               />
               전문가가 될 것이다.
             </p>
@@ -50,11 +53,12 @@
               <span>
                 <label for="goal-time" class="sr-only">목표 도달 시간</label>
                 <input
-                  type="text"
+                  type="number"
                   id="goal-time"
                   name="goal-time"
                   placeholder="예)5시간"
                   class="input-box"
+                  required
                 />
                 시간씩 훈련할 것이다.
               </span>
@@ -62,23 +66,21 @@
           </div>
 
           <div class="btn-wrapper">
-            <button class="calculate-btn">
+            <button type="submit" class="calculate-btn">
               나는 며칠 동안 훈련을 해야 1만 시간이 될까?
             </button>
-            <img
-              src="./images/click.png"
-              alt="클릭하는 손모양"
-              class="click-icon"
-            />
+            <img src="./images/click.png" alt="" class="click-icon" />
           </div>
-        </div>
+        </form>
+
+        <img src="./images/loading.png" alt="로딩 중" class="loading" />
 
         <div class="result-group">
           <p>
             당신은 <span class="user-goal">프로그래밍</span>전문가가 되기 위해서
           </p>
           <p>
-            대략 <span class="user-goal">5110</span>일 이상 훈련하셔야 합니다!
+            대략 <span class="user-time">5110</span>일 이상 훈련하셔야 합니다!
             :)
           </p>
         </div>
@@ -119,19 +121,7 @@
       </p>
     </footer>
 
-    <script>
-      const dialog = document.getElementById("dialog");
-      const showDialogBtn = document.getElementById("open-btn");
-      const closeBtn = document.getElementById("close-btn");
-
-      showDialogBtn.addEventListener("click", () => {
-        dialog.showModal();
-        console.log("모달창 열림");
-      });
-
-      closeBtn.addEventListener("click", () => {
-        dialog.close();
-      });
-    </script>
+    <script src="./src/main.js" type="module"></script>
+    <script src="./src/modal.js"></script>
   </body>
 </html>

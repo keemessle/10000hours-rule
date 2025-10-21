@@ -158,14 +158,11 @@ main {
 
 .training-calculator {
   max-width: 77.1rem;
-  /* display: flex;
-  flex-direction: column; */
   font-size: var(--main-font-size);
   color: var(--main-color);
-  margin-bottom: 12rem;
 }
 
-.input-group {
+.input-form {
   margin-bottom: 14.5rem;
 }
 
@@ -177,7 +174,7 @@ main {
   margin-bottom: 12rem;
 }
 
-.input-box {
+input {
   width: 22.8rem;
   margin: 0 1rem;
   padding: 1.2rem 0;
@@ -222,7 +219,22 @@ main {
   object-fit: contain;
 }
 
+.loading {
+  display: none;
+}
+
+.loading.active {
+  display: block;
+  width: 100px;
+  height: 100px;
+  animation: rotate-loading 3s linear infinite;
+}
+
 .result-group {
+  display: none;
+}
+
+.result-group.active {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -235,7 +247,8 @@ main {
   align-items: center;
 }
 
-.user-goal {
+.user-goal,
+.user-time {
   font-size: 7.2rem;
   font-family: "GmarketSansBold";
   margin: 0 1.2rem;
@@ -243,8 +256,13 @@ main {
 }
 
 .btn-cont {
+  display: none;
+}
+
+.btn-cont.active {
   display: flex;
   gap: 1.2rem;
+  margin-top: 12rem;
 }
 
 .modal-btn {
@@ -358,7 +376,8 @@ footer {
     font-size: 3rem;
   }
 
-  .user-goal {
+  .user-goal,
+  .user-time {
     font-size: 6rem;
   }
 
@@ -424,7 +443,7 @@ footer {
     margin-bottom: 9rem;
   }
 
-  .input-group {
+  .input-form {
     margin-bottom: 9rem;
   }
 
@@ -473,15 +492,16 @@ footer {
   .click-icon {
     width: 5.4rem;
     top: 4.5rem;
-    right: 3.5rem;
+    right: 3rem;
   }
 
   .result-group {
     gap: 1.8rem;
   }
 
-  .user-goal {
-    font-size: 4.8rem;
+  .user-goal,
+  .user-time {
+    font-size: 4rem;
   }
 
   .btn-cont {
@@ -565,8 +585,9 @@ footer {
     gap: 1.6rem;
   }
 
-  .user-goal {
-    font-size: 3.6rem;
+  .user-goal,
+  .user-time {
+    font-size: 3rem;
   }
 
   .btn-cont {
@@ -650,7 +671,7 @@ footer {
     font-size: var(--small-font-size);
   }
 
-  .input-group {
+  .input-form {
     margin-bottom: 6.8rem;
   }
 
@@ -679,7 +700,8 @@ footer {
     right: -0.5rem;
   }
 
-  .user-goal {
+  .user-goal,
+  .user-time {
     font-size: var(--main-font-size);
   }
 
@@ -700,5 +722,12 @@ footer {
 
   .warning-text {
     font-size: 0.8rem;
+  }
+}
+
+/* 로딩 애니메이션 */
+@keyframes rotate-loading {
+  100% {
+    transform: rotate(360deg);
   }
 }
